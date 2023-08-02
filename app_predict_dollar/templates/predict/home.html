@@ -1,0 +1,24 @@
+{% extends 'app_predict_dollar/base.html' %}
+
+{% block content %}
+    <div class="row mt-5">
+        <div class="col">
+            <h1 class="display-5">Envie uma data para previsão</h1>
+        </div>
+    </div>
+    <form action="{% url 'app_predict_dollar:predictDollar' %}" method="post">
+        {% csrf_token %}
+    <div class="container">
+        <input type="text" class="form-control" id="dataInput" placeholder="dd/mm/YYYY" onkeyup="formatDate(this)" name="date">
+
+
+        <div class="row mt-5">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Enviar a previsão</button>
+            </div>
+        </div>
+    </div>
+</form>
+    
+{% endblock content %}
+
