@@ -3,7 +3,6 @@ from . import views
 app_name = "app_predict_dollar"
 
 urlpatterns = [
-    path('', views.predict),
-    path('predictDollar/', views.predictDollar, name="predictDollar")
+    path('', views.predict, name="predict"),
 
 ]
